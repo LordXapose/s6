@@ -1,4 +1,4 @@
-# Sub-task 6 — Multiclass SVM: One-vs-One vs One-vs-Rest
+# Sub-task 6 Multiclass SVM: One-vs-One vs One-vs-Rest
 
 > ADT · Assignment S5 (Support Vector Machines and Kernels) · final sub-task
 > A Support Vector Machine is fundamentally a **binary** classifier. This sub-task shows how it is wrapped to handle three classes, why the two wrapping strategies behave differently, and why on an **imbalanced intrusion problem** plain accuracy is the wrong thing to optimise.
@@ -44,7 +44,7 @@ The 8% exploit class is the realistic part: in real traffic, the thing you most 
 
 ---
 
-## Concept 1 — Why an SVM needs a wrapper at all
+## Concept 1 Why an SVM needs a wrapper at all
 
 A standard SVM finds **one** separating hyperplane between **two** classes (the widest-street boundary from sub-task 1). It has no native notion of "three classes." To classify *k* classes you must decompose the problem into a set of binary problems and combine their answers. There are two standard decompositions.
 
@@ -77,7 +77,7 @@ This is exactly why the sub-task pins k = 3: it is the one value where the two f
 
 ---
 
-## Concept 2 — `decision_function` and the silent scikit-learn detail
+## Concept 2 `decision_function` and the silent scikit-learn detail
 
 `decision_function(X)` returns the raw, pre-threshold confidence scores — one column per internal binary decision. Reading its column count tells you how the model is wired:
 
@@ -99,7 +99,7 @@ That explicit wrapper is why the accuracy comparison below uses `OneVsRestClassi
 
 ---
 
-## Concept 3 — Why scaling lives inside a Pipeline
+## Concept 3 Why scaling lives inside a Pipeline
 
 An RBF SVM is **distance-based**: its kernel measures how close points are, so a feature on a large numeric scale would dominate the distance and drown out the others. Hence `StandardScaler`.
 
@@ -115,7 +115,7 @@ If you scale the full dataset before splitting, the scaler "sees" the validation
 
 ---
 
-## Concept 4 — Why per-class metrics, not accuracy
+## Concept 4 Why per-class metrics, not accuracy
 
 **Accuracy** is the fraction of all predictions that are correct. On imbalanced data it is dominated by the majority classes. Here classes 0 and 1 are 95% of the data, so a model can score 0.90 while quietly failing on the 8% that matters.
 
@@ -143,7 +143,7 @@ Class 2 has **perfect precision but poor recall**: when the model says "exploit"
 
 ---
 
-## Concept 5 — The cost-aware choice
+## Concept 5 The cost-aware choice
 
 In an intrusion-detection setting the two error types are not equally expensive:
 
