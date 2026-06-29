@@ -289,6 +289,7 @@ for the split and the CV splitter).
 ---
 
 ## Glossary
+compares One-vs-One and One-vs-Rest for multiclass SVMs on an imbalanced intrusion detection dataset and shows that even with 90% accuracy, the model can still miss many real attacks, so recall is a more important metric than accuracy
 
 | Term | Meaning | Why you care here |
 |------|---------|-------------------|
