@@ -38,11 +38,7 @@
 to miss is caught only 62 % of the time. **Per-class recall, not accuracy, is the metric that matters here.**
 
 ---
-
-## The fully-commented script
-
-This is the whole sub-task in one runnable file. **Every line carries an inline comment** explaining what it
-does and *why* it is there, so the file doubles as the explanation. Save it as `subtask6.py` and run it.
+**script**
 
 ```python
 # ─────────────────────────────────────────────────────────────────────────────
