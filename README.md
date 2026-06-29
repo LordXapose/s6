@@ -14,7 +14,7 @@
 |------|------------|---------------|
 | **`README.md`** | This document | The concept walk-through + a fully line-commented script |
 | **`s6.html`** | Single-screen slide | The presentable S6-opener unit (one screen, self-contained) |
-| **`s6.pdf`** | Full 6-page report | Title block, figures, tables, glossary — the formal write-up |
+| **`s6.pdf`** | Full 6-page report | Title block, figures, tables, glossary the formal write-up |
 
 > Every number across all three files is identical and reproduces exactly from the seeds in the code
 > (`random_state=7` for the data, `random_state=42` for the split and the cross-validation splitter).
@@ -34,8 +34,8 @@
 | **Class 2 (exploit) recall** | **0.615 ← the problem** | the rare class we cannot afford to miss |
 | Overall test accuracy | 0.900 | **misleadingly healthy** |
 
-**One-line takeaway:** accuracy looks fine at 0.90, but the rare exploit class — the one you can least afford
-to miss — is caught only 62 % of the time. **Per-class recall, not accuracy, is the metric that matters here.**
+**One-line takeaway:** accuracy looks fine at 0.90, but the rare exploit class the one you can least afford
+to miss is caught only 62 % of the time. **Per-class recall, not accuracy, is the metric that matters here.**
 
 ---
 
